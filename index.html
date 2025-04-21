@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js" defer></script>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <h1>This is h1 tag from html</h1>
+    <div id="root">This is a div which will be overriden by react element</div>
+
+    <!-- ----------javascript from here--------------  -->
+    <script>
+        const b = React.createElement("h1", {},"This is h1 element from react")
+
+
+        // variable having list of children
+        // use key to AVOID ERROR in case of same element 
+        const c = React.createElement("h1",{},[
+            React.createElement("div",{key:"first"},"this is a div"),
+            React.createElement('div',{key:"second"},"another div")          
+        ])
+        const root = ReactDOM.createRoot(document.getElementById("root"))
+        root.render(c)
+
+
+        // checking jsx
+        // const c = <h1>This is jsx (jsx)</h1>
+        // const root = ReactDOM.createRoot(document.getElementById("div-conainer"))
+        // root.render(c)
+    </script>
+</body>
+</html>

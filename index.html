@@ -18,7 +18,7 @@
 
 
         // variable having list of children
-        // use key to AVOID ERROR in case of same element 
+        // use key to AVOID Warning in case of same element cause react uses this key and DOM uses ids
         const c = React.createElement("h1",{},[
             React.createElement("div",{key:"first"},"this is a div"),
             React.createElement('div',{key:"second"},"another div")          
@@ -27,7 +27,8 @@
         root.render(c)
 
 
-        // checking jsx
+        // checking jsx 
+        // jsx is javascript xml used to write html like code
         // const c = <h1>This is jsx (jsx)</h1>
         // const root = ReactDOM.createRoot(document.getElementById("div-conainer"))
         // root.render(c)

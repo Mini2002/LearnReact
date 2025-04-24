@@ -11,8 +11,12 @@ createElement -> createRoot-> render
 React and ReactDOM are objects 
 
 npm init initalize npm
-parcel is a bundler like vite or 
+parcel is a bundler like vite 
 
 dev dependency : parcel is a build tool we need it only in Dev not in Prod anything required just for develpoment is dev dependency mean while react will be required in live site or the Prod so its depndency.
 
 Parcel does the same work as CRA minus the bloat and un used files.
+
+package-json : has dependency 
+package-lock.json: depency so every person have the same versions installed 
+^ ensures to have minor versions changes,  ~ major changes 
